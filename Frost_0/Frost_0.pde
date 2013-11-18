@@ -17,7 +17,8 @@ void setup()
   food = new float[width/ratio][height/ratio];
   for (int x = 0; x < width/ratio; ++x)
     for (int y = 0; y < height/ratio; ++y) {
-      food[x][y] = ((img.pixels[(x+y*512)*ratio] >> 8) & 0xFF)/255.0;
+     // food[x][y] = ((img.pixels[(x+y*512)*ratio] >> 8) & 0xFF)/255.0;
+      food[x][y] = 0.34;
       if (inverted) food[x][y] = 1-food[x][y];
     }
   if (inverted) {
